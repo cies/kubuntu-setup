@@ -1,0 +1,35 @@
+/* Add the following code to TST's Preferences > Advanced > Extra style rules text box */
+
+
+
+/* Show title of unread tabs with italic font */
+tab-item.unread .label-content {
+  font-style: italic !important;
+}
+
+/* Add private browsing indicator per tab */
+tab-item.private-browsing tab-label:before {
+  content: "🕶";
+}
+
+/* Push tab labels slightly to the right so they're completely hidden in collapsed state */
+tab-item .label {
+    margin-left: 7px;
+}
+
+/* Hide close buttons on tabs. */
+tab-item .closebox {
+    visibility: collapse;
+}
+tab-item:hover .closebox {
+    visibility: initial;
+}
+
+/* Close Tabs to End */
+*[id^="treestyletab_piro_sakura_ne_jp-menuitem-_context_closeTabsToTheEnd"],
+
+/* Close Other Tabs */
+*[id^="treestyletab_piro_sakura_ne_jp-menuitem-_context_closeOtherTabs"] {
+  display: none;
+}
+

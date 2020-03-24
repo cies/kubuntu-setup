@@ -1,0 +1,35 @@
+/*
+   To be used with the awesome Tree Style Tabs addon.
+
+In about:config set toolkit.legacyUserProfileCustomizations.stylesheets to true
+
+In about:profiles open the "Root Folder/Directory" in the profile that's most likely called "default". That's the place you either find, or need to create, the `chrome` folder.
+
+Then place this file inside.
+
+On Linux this file should be in:
+    /home/$USER/.mozilla/firefox/$USER_ID.default/chrome/userChrome.css
+   
+Windows
+    Location: C:\Users\<YourUsername>\AppData\Roaming\Mozilla\Firefox\Profiles\<YourFirefoxProfile>\chrome
+    Notes:
+        If minimize, maximize, and close buttons are no longer visible, enable the Title Bar or Menu Bar in Firefox Customize.
+macOS
+    Location: /Users/<YourUsername>/Library/Application Support/Firefox/Profiles/<YourFirefoxProfile>/chrome
+    Notes:
+        If minimize, maximize, and close buttons overlap other controls, add the Flexible Space in Firefox Customize.
+   
+
+*/
+
+#main-window[tabsintitlebar="true"]:not([extradragspace="true"]) #TabsToolbar > .toolbar-items {
+  opacity: 0;
+  pointer-events: none;
+}
+#main-window:not([tabsintitlebar="true"]) #TabsToolbar {
+    visibility: collapse !important;
+}
+
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
+  display: none;
+}
