@@ -20,9 +20,15 @@ switch to start menu to "application menu" (right click)
 regional settings > date & time > time zone to Amsterdam
  
 formats > detailed setting > all to "C"
+
+
+## The panel
+
+Add the following widget/applets/plasmoids to the panel:
  
-add system load viewer applet to panel
-add redshift control applet to panel
+* System Load Viewer
+* Redshift Control
+* Media Player (media play/pause key on your keyboard should work)
 
 
 ## Konsole
@@ -55,3 +61,16 @@ Places toolbar:
 * Trash
 
 Remove the "Search For" submenu in the places sidebar
+
+
+## Consider
+
+Global shortcuts for most used actions (that are otherwise all over the place on different keyboards)
+  * play/pause
+  * screen brightness/backlight up/down
+  * redshift on/off
+  * increase/decrease volume
+  * jump to konsole (or open one)
+  * jump to browser (or open one)
+
+

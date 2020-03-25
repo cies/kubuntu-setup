@@ -11,6 +11,7 @@ Gotta install 'm.
 * Privacy badger
 * 1Password X
 * Bitwarden
+* Plasma Integration
 
 
 ## Preferences
