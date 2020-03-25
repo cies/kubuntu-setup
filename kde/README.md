@@ -7,18 +7,31 @@ sudo apt-get install -y plasma-applet-redshift-control
 sudo apt-get install -y kturtle
 
 
+## Wallpaper
+
+Find one, put it in `~/Pictures/wallpaper` and use both for:
+
+* The current display
+* Any ather displays you may have plugged in
+* As an SSDM "Startup and Shutdown" background in "System Settings" (see next section)
+
+
 ## System Settings
 
-* input devices touchpad > tap clicking and natural scrolling
-* personalization > applications > no feedback (kills busy cursor)
-* desktop effects > dim inactive and for root privs
-* switch to start menu to "application menu" (right click)
-* regional settings:
-  * date & time > time zone to Amsterdam
-  * formats > detailed setting > all to "C"
+* Startup and Shutdown > Login Screen (SDD) > Theme > Breeze > Background
+* Personalization > Applications > No feedback (kills busy cursor)
+* Desktop effects > Dim inactive and Dim for root privs
+* Regional settings:
+  * Date & Time > Time zone to Amsterdam
+  * Formats > Detailed setting > set all to "C"
+* Input devices:
+  * Mouse: increase speed, invert scrolling
+  * Touchpad: increase speed, tap clicking and invert scrolling
 
 
 ## The panel
+
+Switch the start menu to "Application menu" (right click in bottom-left)
 
 Add the following widget/applets/plasmoids to the panel:
  

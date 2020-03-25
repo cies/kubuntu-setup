@@ -67,7 +67,7 @@ EOL
 
 ## Some system packages
 
-    sudo apt-get install -y git vim htop tree build-essential net-tools
+    sudo apt-get install -y git vim htop tree dtrx build-essential net-tools
 
 
 ## Assume identity
