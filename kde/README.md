@@ -11,14 +11,16 @@ sudo apt-get install -y kturtle
 
 Find one, put it in `~/Pictures/wallpaper` and use both for:
 
-* The current display
-* Any ather displays you may have plugged in
+* The current display's background
+* Any other backgrounds for displays you may have plugged in
 * As an SSDM "Startup and Shutdown" background in "System Settings" (see next section)
+* And in "Desktop Behavior > Screen Locking" in "System Settings" (see next section)
 
 
 ## System Settings
 
 * Startup and Shutdown > Login Screen (SDD) > Theme > Breeze > Background
+* Desktop Behavior > Screen Locking > Appearance > Add Image...
 * Personalization > Applications > No feedback (kills busy cursor)
 * Desktop effects > Dim inactive and Dim for root privs
 * Regional settings:
