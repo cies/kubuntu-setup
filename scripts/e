@@ -1,0 +1,40 @@
+#!/bin/sh
+#
+# Quick shortcut to an editor.
+#
+# This means that as I travel back and forth between editors, hey, I don't have
+# to re-learn any arcane commands. Neat.
+#
+# USAGE:
+#
+#   $ e
+#   # => opens the current directory in your editor
+#
+#   $ e .
+#   $ e /usr/local
+#   # => opens the specified directory in your editor
+
+
+# Only when EDITOR is Emacs and `emacsclient` is around,
+# try to spin up a daemon instance of Emacs if it does not already runs,
+# and set the editor to `emacsclient -c`.
+
+if (( [ "$EDITOR" = "emacs" ] && [ -e "/usr/bin/emacsclient" ] )) ; then
+  tempuid=$(id -u)
+  if [ ! -e "/tmp/emacs$tempuid/server" ] ; then
+    emacs --daemon &
+    while [ ! -e "/tmp/emacs$tempuid/server" ] ; do sleep 1 ; done
+  fi
+  EDITOR="emacsclient -c"
+fi
+
+
+# Open EDITOR (maybe set above), and return back to the shell.
+
+if [ "$1" = "" ] ; then
+  echo Running: $EDITOR .
+  ($EDITOR . ; echo "Emacs client detached\n") &
+else
+  echo Running: $EDITOR "$@"
+  ($EDITOR "$@" ; echo "Emacs client detached\n") &
+fi

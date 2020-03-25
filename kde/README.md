@@ -1,6 +1,10 @@
 # KDE
 
-    sudo apt install redshift plasma-applet-redshift-control
+Some tools that are note installed by default:
+
+sudo apt-get install -y kate kompare ktorrent
+sudo apt-get install -y plasma-applet-redshift-control
+sudo apt-get install -y kturtle
 
 
 ## System Settings

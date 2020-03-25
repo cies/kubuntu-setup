@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# This helps when watching a movie
+
+echo "This tool send virtual shift key presses to X, preventing power saving modes to kick in. Use ctrl-C to quit."
+
+while sleep 30 ; do xdotool keydown Shift_L keyup Shift_L ; done

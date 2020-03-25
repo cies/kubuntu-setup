@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# Kills an Emacs daemon, prompting to save any unwritten modifications.
+
+emacsclient -c -e '(save-buffers-kill-emacs)'

@@ -45,10 +45,22 @@ Answer the questions on you keyboard type. On my XPS13 I use "Generic 104 PC", "
 
 ## Remove snap
 
-I have it. It makes my system less predictable, increases load times, makes UI stuff look ugly.
+I hate it. It makes my system less predictable, increases load times, makes UI stuff look ugly.
 
-    sudo rm -rf /var/cache/snapd/
-    sudo apt autoremove --purge snapd
+    sudo rm -rf /var/cache/snapd/ && sudo apt autoremove --purge snapd
+
+And then:
+
     rm -fr ~/snap
+
+
+## Some system packages
+
+    sudo apt-get install -y git vim htop tree build-essential
+
+
+## Assume identity
+
+You might want to copy over some key files.
 
 

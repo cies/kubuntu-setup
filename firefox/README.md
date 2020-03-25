@@ -1,33 +1,38 @@
 # Firefox
 
+Firefox comes pre-installed on Kubutnu.
 
-Install plugins:
+## Plugins
+
+Gotta install 'm.
+
+* Tree Style Tab
 * uBlock
 * Privacy badger
 * 1Password X
 * Bitwarden
-* Tree Style Tab
 
 
-# Preferences
+## Preferences
 
 ### General
-Startup: Restore previous session
-Downloads: Always ask where
 
+* Startup: Restore previous session
+* Downloads: Always ask where
 
-### Privicy and Security
+### Privicy & Security
 
-Logins and Passwords: DONT Ask to save logins and passwords for websites
+* Logins and Passwords: DONT Ask to save logins and passwords for websites
 
-Permissions:
- * Location -> Block new requests
- * Notifications -> Block new requests
+* Permissions:
+   * Location -> Block new requests
+   * Notifications -> Block new requests
 
  
-# Navigation/address bar
+## Navigation/address bar
 
-Icons/widgets from left to right:
+Use the "customize" mode to organize icons/widgets from left to right:
+
 * TST
 * Library
 * 2x flexible space
@@ -38,11 +43,32 @@ Icons/widgets from left to right:
 * hamburger menu
 
 
-# Pin your tabs
+## Pin your tabs
 
-Make sure to first restart FF with a tab pinned to be sure it remembers/
+Make sure to first restart FF with a tab pinned to be sure it remembers your session
 
 
-# Configure Tree Style Tab
+## Make spellcheck multi-lingual
 
-See the `userChrome.css` and `TST-Extra-style-rules.css` files. They contain instruction on how to install them.
+[Explained here](https://superuser.com/questions/108177/how-do-i-make-firefox-spellcheck-in-multiple-languages-simultaneously)
+
+
+## Configure Tree Style Tab
+
+See the `userChrome.css` and `TST-Extra-style-rules.css` files in this directory,
+they contain instructions on how to install them.
+
+[More customization and or updates to our current CSS rules](https://github.com/piroor/treestyletab/wiki/Code-snippets-for-custom-style-rules)
+
+
+## Configure keyboard shortcuts
+
+This is not possible without hacking FF.
+
+[An indepth explanation how to do so](https://github.com/nilcons/firefox-hacks)
+
+
+## Further customizations to consider
+
+* https://github.com/hoplax/hoplax
+
