@@ -53,10 +53,21 @@ And then:
 
     rm -fr ~/snap
 
+And make sure it never installs again:
+
+```
+sudo bash -c "cat > /etc/apt/preferences.d/no-snapd.pref" << EOL
+Package: snapd
+Pin: origin ""
+Pin-Priority: -1
+EOL
+```
+
+
 
 ## Some system packages
 
-    sudo apt-get install -y git vim htop tree build-essential
+    sudo apt-get install -y git vim htop tree build-essential net-tools
 
 
 ## Assume identity

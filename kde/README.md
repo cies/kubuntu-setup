@@ -9,17 +9,13 @@ sudo apt-get install -y kturtle
 
 ## System Settings
 
-input devices touchpad > tap clicking and natural scrolling
- 
-personalization > applications > no feedback (kills busy cursor)
- 
-desktop effects > dim inactive and for root privs
- 
-switch to start menu to "application menu" (right click)
- 
-regional settings > date & time > time zone to Amsterdam
- 
-formats > detailed setting > all to "C"
+* input devices touchpad > tap clicking and natural scrolling
+* personalization > applications > no feedback (kills busy cursor)
+* desktop effects > dim inactive and for root privs
+* switch to start menu to "application menu" (right click)
+* regional settings:
+  * date & time > time zone to Amsterdam
+  * formats > detailed setting > all to "C"
 
 
 ## The panel

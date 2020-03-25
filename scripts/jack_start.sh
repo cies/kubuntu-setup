@@ -1,1 +1,1 @@
-kxstudio/jack_start.sh
+../kxstudio/jack_start.sh

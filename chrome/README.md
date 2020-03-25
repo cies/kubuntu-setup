@@ -1,17 +1,21 @@
 # Chrome (Chromium actually)
 
-Because one browser is not enough. 
+Because one browser (Firefox, yay) is not enough these days. 
 
-The `chromium-browser` package install it as a snap (and auto installs `snapd`), so let's find another way...
+The `chromium-browser` package from Ubuntu (Kubuntu) installs it as a snap (and auto installs `snapd`, which sould have been blacklistes as per the root README). I hate snap, hence it is blacklisted. So let's find another way...
+
+Make sure `chrome` (includes Chromium) is not running:
+
+    killall -9 chrome
 
 
-https://askubuntu.com/questions/1204571/chromium-without-snap
+Then add some repos from Debian:
 
 ```
 sudo bash -c "cat > /etc/apt/sources.list.d/debian.list" << EOL
 deb http://ftp.debian.org/debian buster main
 deb http://ftp.debian.org/debian buster-updates main
-deb http://ftp.debian.org/debian-security buster/updates main
+deb http://security.debian.org/debian-security buster/updates main
 EOL
 ```
 
@@ -50,4 +54,5 @@ Finally run:
 
 ## Plugins, add-ons, apps, whatever...
 
-I only use Chromium for Hangouts, so I install that.
+* I only use Chromium for Hangouts, so I install that from the Chrome Store.
+
