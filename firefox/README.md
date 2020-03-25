@@ -62,14 +62,14 @@ they contain instructions on how to install them.
 [More customization and or updates to our current CSS rules](https://github.com/piroor/treestyletab/wiki/Code-snippets-for-custom-style-rules)
 
 
-## Configure keyboard shortcuts
+## TODO: Configure keyboard shortcuts
 
 This is not possible without hacking FF.
 
 [An indepth explanation how to do so](https://github.com/nilcons/firefox-hacks)
 
 
-## Further customizations to consider
+## TODO: Further customizations to consider
 
 * https://github.com/hoplax/hoplax
 

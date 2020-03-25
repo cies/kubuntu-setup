@@ -72,7 +72,7 @@ Places toolbar:
 Remove the "Search For" submenu in the places sidebar
 
 
-## Consider
+## TODO: Consider
 
 Global shortcuts for most used actions (that are otherwise all over the place on different keyboards)
   * play/pause
