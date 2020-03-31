@@ -2,9 +2,9 @@
 
 Some tools that are note installed by default:
 
-sudo apt-get install -y kate kompare ktorrent kolourpaint
-sudo apt-get install -y plasma-applet-redshift-control
-sudo apt-get install -y kturtle
+    sudo apt-get install -y kate kompare ktorrent kolourpaint
+    sudo apt-get install -y plasma-applet-redshift-control
+    sudo apt-get install -y kturtle
 
 
 ## Wallpaper
@@ -28,7 +28,11 @@ Find one, put it in `~/Pictures/wallpaper` and use both for:
   * Formats > Detailed setting > set all to "C"
 * Input devices:
   * Mouse: increase speed, invert scrolling
-  * Touchpad: increase speed, tap clicking and invert scrolling
+  * Touchpad: increase speed, enable tap clicking and invert scrolling
+* Shortcuts > Global Shortcuts > (reassign if needed)
+  * Audio Volume > Alternates for: Mute/Decrease/Increase Volume to `META`-`0`/`-`/`=` (meta being the WIN key)
+  * Media Controller > Play/Pause media playback to `META`-`p`
+  * Power Management > Alternates for: Increase/Decrease Screen Brightness to `META`-`(`/`)`
 
 
 ## The panel
