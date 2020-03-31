@@ -48,14 +48,30 @@ Add the following widget/applets/plasmoids to the panel:
 
 ## Konsole
 
+After a long adventure with `tmux` I now simply use Konsole's tabs. No splitting, no "remote sessions", but I find little need for that nowadays.
+
 Settings > Edit default profile
 * 70 rows
 * Apperance: Dark pastels
-* Font: Ubuntu Mono 12px
+* Font: Source Code Pro 14px (install instructions in `../fonts/README.md`)
 * Scrolling -> Unlimited scroll
 
 Settings > Configure Konsole
-* DONT Show menubar by default (Ctrl-M to toggle)
+* General: DONT Show menubar by default (Ctrl-M to toggle)
+* TabBar:
+  * Position: Below
+  * Close tab button: None (use `CTRL-D` or `exit`)
+  * Use user defined stylesheet: `konsole.css` from the same dir as this README
+  * New tab behavior: After current tab
+
+Some cool shortcuts I keep forgetting:
+
+* `CTRL-SHIFT-t` for new tab
+* `SHIFT-left/right` for tab switch, or `CTRL-SHIFT-left/right` for tab ordering
+* `SHIFT-PgUp/Down` for half page scrolling
+* `CTRL-SHIFT-f` for search in buffer, `ESC` to get out, `(SHIFT)-enter` for prev/next match
+
+Splitting does not work well. It should split a tab in panes, but instead each split has its own tabs.
 
 
 ## Dolphin
@@ -92,4 +108,12 @@ Now set up the following windows + shortcuts:
  * IntelliJ: `META`-`i`
 
 Set 'm up by right clicking the window bar: More Actions > Window Shortcut...
+
+
+## Notes
+
+* Keep resizing those tiny default dialogs and windows, KDE is quite good it remembering those
+
+
+
 
