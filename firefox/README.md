@@ -1,6 +1,6 @@
 # Firefox
 
-Firefox comes pre-installed on Kubutnu.
+Firefox comes pre-installed on Kubutnu. It easily is one of my most used apps, and still has a horrible story for power users.
 
 ## Plugins
 
@@ -9,9 +9,10 @@ Gotta install 'm.
 * Tree Style Tab
 * uBlock
 * Privacy badger
-* 1Password X
-* Bitwarden
-* Plasma Integration
+* Plasma Integration (integration with KDE, so you get OS play-pause to control browser players)
+* Bitwarden (open source, zero knowledge protocol, free for personal use password manager)
+
+Sometimes also have to install 1Password X (password manager), the only non open source plugin. This is a problem as browser plugins have access to a lot of privacy sensitive data.
 
 
 ## Preferences
@@ -37,8 +38,8 @@ Use the "customize" mode to organize icons/widgets from left to right:
 * TST
 * Library
 * 2x flexible space
-* <-
-* ->
+* `<-`
+* `->`
 * url bar
 * the rest (services, accounts, blockers)
 * hamburger menu
@@ -71,5 +72,6 @@ This is not possible without hacking FF.
 
 ## TODO: Further customizations to consider
 
-* https://github.com/hoplax/hoplax
+* Something like this? https://github.com/hoplax/hoplax
+* Or better keyboard base link clicking
 
