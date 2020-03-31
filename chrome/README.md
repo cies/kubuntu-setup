@@ -54,5 +54,5 @@ Finally run:
 
 ## Plugins, add-ons, apps, whatever...
 
-* I only use Chromium for Hangouts, so I install that from the Chrome Store.
+* I only use Chromium for [Hangouts](https://chrome.google.com/webstore/detail/google-hangouts/nckgahadagoaajjgafhacjanaoiihapd), so I install that from the Chrome Store.
 

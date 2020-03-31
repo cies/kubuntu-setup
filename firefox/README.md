@@ -75,3 +75,8 @@ This is not possible without hacking FF.
 * Something like this? https://github.com/hoplax/hoplax
 * Or better keyboard base link clicking
 
+
+## TODO: Consider automatic deletion of cookies
+
+Like with the Cookie Auto Delete addon
+

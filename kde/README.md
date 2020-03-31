@@ -33,6 +33,8 @@ Find one, put it in `~/Pictures/wallpaper` and use both for:
   * Audio Volume > Alternates for: Mute/Decrease/Increase Volume to `META`-`0`/`-`/`=` (meta being the WIN key)
   * Media Controller > Play/Pause media playback to `META`-`p`
   * Power Management > Alternates for: Increase/Decrease Screen Brightness to `META`-`(`/`)`
+* Shortcuts > KWin
+  * Toggle Present Windows (on all desktops): `META-~` (tilde/backtick key)
 
 
 ## The panel
@@ -74,7 +76,7 @@ After a long adventure with `tmux` I now simply use Konsole's tabs. No splitting
 
 Settings > Edit default profile
 * 70 rows
-* Apperance: Dark pastels
+* Apperance: Breeze
 * Font: Source Code Pro 14px (install instructions in `../fonts/README.md`)
 * Scrolling -> Unlimited scroll
 
@@ -125,12 +127,22 @@ Rihgt click the lightbulb icon in the task bar (as per earlier instruction) and 
 
 Now set up the following windows + shortcuts:
 
- * Kosole: `META`-`k`
+ * Kosole: `META`-`k`  (somehow this one becomes forgotten)
  * Firefox: `META`-`f`
  * IntelliJ: `META`-`i`
 
 Set 'm up by right clicking the window bar: More Actions > Window Shortcut...
 
+
+# Some nice shortcuts
+
+* Toggle windows maximize: `META-PgUp`
+* Minimize: `META-PgDn`
+* Quick tile window L/R/T/B: `META-<arrows>`
+* Switch to window to the L/R or A/B: `META-ALT-<arrows>`
+* Toggle present windows: `META-~` (tilde/backtick) and you can type to find a window in this mode
+* Open print screen dialog: `PrScr`
+*
 
 ## Notes
 
