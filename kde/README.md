@@ -45,6 +45,28 @@ Add the following widget/applets/plasmoids to the panel:
 * Redshift Control
 * Media Player (media play/pause key on your keyboard should work)
 
+Configure the System Load Viewer (love this thing) as follows:
+* Set compact bar (first!)
+* Select all but cache in "Show:"
+* Colors: Set colors manually
+* Maybe tweak the colors a little...
+* WISH: it'd also show network (aggregated in/out) and storage (aggregated i/o)
+
+From left to right:
+* K-menu
+* NOT a pager (remove it)
+* task switcher
+* status bar
+* the tiniest spacer you can make
+* Media Player
+* Redshift Control
+* System Load Viewer (love this)
+* Clock
+
+Now adjust the height of the pannel so that the icons look best (not too much out of line)
+
+And finally lock the widgets in the panel
+
 
 ## Konsole
 
