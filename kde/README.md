@@ -78,14 +78,18 @@ Places toolbar:
 Remove the "Search For" submenu in the places sidebar
 
 
-## TODO: Consider
+## Redshift (red filter)
 
-Global shortcuts for most used actions (that are otherwise all over the place on different keyboards)
-  * play/pause
-  * screen brightness/backlight up/down
-  * redshift on/off
-  * increase/decrease volume
-  * jump to konsole (or open one)
-  * jump to browser (or open one)
+Rihgt click the lightbulb icon in the task bar (as per earlier instruction) and pick Configure Redshift Control. In Keyboard Shortcuts set it to `META`-`R`
 
+
+## Window shortcuts
+
+Now set up the following windows + shortcuts:
+
+ * Kosole: `META`-`k`
+ * Firefox: `META`-`f`
+ * IntelliJ: `META`-`i`
+
+Set 'm up by right clicking the window bar: More Actions > Window Shortcut...
 
