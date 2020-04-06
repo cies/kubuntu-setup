@@ -28,18 +28,18 @@ If I don't do these first, doing the rest will be unnessecarily frustrating.
 
 ## Keyboard mapping
 
-This maps `CAPS` to an extra `CTRL` and setup up the `RightALT` as the compose key
-(allowing: `RightALT` `"` `e` → `ë`).
+This maps `CAPS` to an extra `CTRL`, sets up the `RightALT` as the compose key
+(allowing: `RightALT` `"` `e` → `ë`), and makes the `Menu` key a second `Win` key.
 
-    sudo bash -c "cat > /etc/default/keyboard" << EOL
-    # KEYBOARD CONFIGURATION FILE
-    # Consult the keyboard(5) manual page.
-    XKBMODEL="pc105"
-    XKBLAYOUT="us"
-    XKBVARIANT="euro"
-    XKBOPTIONS="compose:ralt,ctrl:nocaps"
-    BACKSPACE="guess"
-    EOL
+```
+sudo bash -c "cat > /etc/default/keyboard" << EOL
+XKBMODEL="pc105"
+XKBLAYOUT="us"
+XKBVARIANT="euro"
+XKBOPTIONS="compose:ralt,ctrl:nocaps,altwin:menu"
+BACKSPACE="guess"
+EOL
+```
 
 Then run:
 

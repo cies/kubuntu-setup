@@ -1,7 +1,13 @@
 # Zsh
 
+    sudo apt-get install -y zsh fzf gradle-completion ripgrep dtrx xclip 
+    sudo usermod -s /bin/zsh $USER
 
-sudo apt-get install -y zsh fzf gradle-completion ripgrep dtrx xclip
+
+Then I use Zinit as my plugin manager
+
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
+
 
 
 * e: editor
