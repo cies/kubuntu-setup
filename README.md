@@ -26,17 +26,25 @@ When installing choose these options:
 If I don't do these first, doing the rest will be unnessecarily frustrating.
 
 
+## Get `/usr/local/src` ready
+
+I like to use that directory as a normal user.
+
+    sudo chown $USER:$USER /usr/local/src
+
+
 ## Keyboard mapping
 
-This maps `CAPS` to an extra `CTRL`, sets up the `RightALT` as the compose key
-(allowing: `RightALT` `"` `e` → `ë`), and makes the `Menu` key a second `Win` key.
+This maps `CAPS` to an extra `CTRL`, sets up `R-ALT` as the compose key
+(allowing: `R-ALT` `"` `e` → `ë`), and maps `MENU` to `R-CTRL`, and `R-CTRL` to the `R-WIN` key.
+Then I physically switch keycaps on these keys the `MENU` and `R-CTRL` key.
 
 ```
 sudo bash -c "cat > /etc/default/keyboard" << EOL
 XKBMODEL="pc105"
 XKBLAYOUT="us"
 XKBVARIANT="euro"
-XKBOPTIONS="compose:ralt,ctrl:nocaps,altwin:menu"
+XKBOPTIONS="compose:ralt,ctrl:nocaps,ctrl:swap_rwin_rctl,ctrl:menu_rctrl"
 BACKSPACE="guess"
 EOL
 ```
@@ -73,7 +81,7 @@ EOL
 
 I'm blind without these, and the rest of the READMEs may require them.
 
-    sudo apt-get install -y git tig vim htop tree dtrx build-essential net-tools
+    sudo apt-get install -y git tig vim htop iotop tree dtrx build-essential net-tools
 
 
 ## That's it...

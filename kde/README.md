@@ -16,6 +16,9 @@ Find one, put it in `~/Pictures/wallpaper` and use both for:
 * As an SSDM "Startup and Shutdown" background in "System Settings" (see next section)
 * And in "Desktop Behavior > Screen Locking" in "System Settings" (see next section)
 
+Now get rid of the hamburger menu in the top right of the desktop. Right click the desktop
+and select "Configure Desktop..." > Tweaks > DONT Show the desktop toolbox.
+
 
 ## System Settings
 
