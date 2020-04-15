@@ -1,5 +1,6 @@
 # TODOs
 
+* a way to share wifi passwords between machines
 * shell setup (zsh with some plugin tool and some dotfiles)
 * vim setup (i kinda like space-vim)
 * aliasses for neovim (copy pasting just works better)

@@ -22,22 +22,24 @@ and select "Configure Desktop..." > Tweaks > DONT Show the desktop toolbox.
 
 ## System Settings
 
-* Startup and Shutdown > Login Screen (SDD) > Theme > Breeze > Background
-* Desktop Behavior > Screen Locking > Appearance > Add Image...
-* Personalization > Applications > No feedback (kills busy cursor)
-* Desktop effects > Dim inactive and Dim for root privs
-* Regional settings:
-  * Date & Time > Time zone to Amsterdam
-  * Formats > Detailed setting > set all to "C"
-* Input devices:
-  * Mouse: increase speed, invert scrolling
-  * Touchpad: increase speed, enable tap clicking and invert scrolling
-* Shortcuts > Global Shortcuts > (reassign if needed)
+* Workspace > Startup and Shutdown > Login Screen (SDD) > Theme > Breeze > Background
+* Workspace > Desktop Behavior:
+  * Screen Edges > remove the action from the top-left corner
+  * Screen Locking > Appearance > Add Image...
+  * Desktop effects > Dim inactive and Dim for root privs
+* Workspace > Shortcuts > Global Shortcuts > (reassign if needed):
   * Audio Volume > Alternates for: Mute/Decrease/Increase Volume to `META`-`0`/`-`/`=` (meta being the WIN key)
   * Media Controller > Play/Pause media playback to `META`-`p`
   * Power Management > Alternates for: Increase/Decrease Screen Brightness to `META`-`(`/`)`
-* Shortcuts > KWin
+* Workspace > Shortcuts > KWin:
   * Toggle Present Windows (on all desktops): `META-~` (tilde/backtick key)
+* Personalization > Applications > No feedback (kills busy cursor)
+* Personalization > Regional settings:
+  * Date & Time > Time zone to Amsterdam
+  * Formats > Detailed setting > set all to "C"
+* Hardware > Input devices:
+  * Mouse: increase speed, invert scrolling
+  * Touchpad: increase speed, enable tap clicking and invert scrolling
 
 
 ## The panel
