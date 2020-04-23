@@ -58,7 +58,7 @@ Answer the questions. It puts the keyboard config realy deep in the OS (initramf
 
 ## Remove snap
 
-I hate it. It makes my system less predictable, increases load times, makes UI stuff look ugly, obfuscates process monitoring, hogs memory, cannot deal with files in `/tmp` (and I happen to use `/tmp` a lot), makes if hard to do audio (like connecting a mic to Chromium)... I can go on.
+I hate it. It makes my system less predictable, increases load times, makes UI stuff look ugly, obfuscates process monitoring, hogs resources, does not allow me to start applications from the command line, cannot deal with files in `/tmp` (and I happen to use `/tmp` a lot), litters my system non-standard directories, installs in `$HOME` what I consider system applications, creates loads of mounts, makes if hard to do audio (like connecting a mic to Chromium)... I can go on.
 
     sudo rm -rf /var/cache/snapd/ && sudo apt autoremove --purge snapd
 
