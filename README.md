@@ -26,11 +26,13 @@ When installing choose these options:
 If I don't do these first, doing the rest will be unnessecarily frustrating.
 
 
-## Get `/usr/local/src` ready
+## Install some packages
 
-I like to use that directory as a normal user.
+I'm blind without these, and the rest of the READMEs may require them.
 
-    sudo chown $USER:$USER /usr/local/src
+```
+sudo apt-get install -y git tig vim htop iotop tree build-essential net-tools
+```
 
 
 ## Keyboard mapping
@@ -51,20 +53,29 @@ EOL
 
 Then run:
 
-    sudo dpkg-reconfigure keyboard-configuration
+```
+sudo dpkg-reconfigure keyboard-configuration
+```
 
 Answer the questions. It puts the keyboard config realy deep in the OS (initramfs), so it works always and everywhere. It requires a restart to be in effect.
+
+
+## Get `/usr/local/src` ready
+
+I like to use that directory as a normal user.
+
+```
+sudo chown $USER:$USER /usr/local/src
+```
 
 
 ## Remove snap
 
 I hate it. It makes my system less predictable, increases load times, makes UI stuff look ugly, obfuscates process monitoring, hogs resources, does not allow me to start applications from the command line, cannot deal with files in `/tmp` (and I happen to use `/tmp` a lot), litters my system non-standard directories, installs in `$HOME` what I consider system applications, creates loads of mounts, makes if hard to do audio (like connecting a mic to Chromium)... I can go on.
 
-    sudo rm -rf /var/cache/snapd/ && sudo apt autoremove --purge snapd
-
-And then:
-
-    rm -fr ~/snap
+```
+sudo rm -rf /var/cache/snapd/ && sudo apt autoremove --purge snapd && rm -fr ~/snap
+```
 
 And make sure it never installs again:
 
@@ -75,13 +86,6 @@ Pin: origin ""
 Pin-Priority: -1
 EOL
 ```
-
-
-## Install some packages
-
-I'm blind without these, and the rest of the READMEs may require them.
-
-    sudo apt-get install -y git tig vim htop iotop tree dtrx build-essential net-tools
 
 
 ## That's it...

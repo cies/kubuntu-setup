@@ -1,10 +1,10 @@
 # KDE
 
-Some tools that are note installed by default:
+Some tools that are not installed by default:
 
-    sudo apt-get install -y kate kompare ktorrent kolourpaint
-    sudo apt-get install -y plasma-applet-redshift-control
-    sudo apt-get install -y kturtle
+```
+sudo apt-get install -y kate kompare ktorrent kolourpaint plasma-applet-redshift-control kturtle
+```
 
 
 ## Wallpaper
@@ -13,36 +13,36 @@ Find one, put it in `~/Pictures/wallpaper` and use both for:
 
 * The current display's background
 * Any other backgrounds for displays you may have plugged in
-* As an SSDM "Startup and Shutdown" background in "System Settings" (see next section)
-* And in "Desktop Behavior > Screen Locking" in "System Settings" (see next section)
+* An in two places in System Settings (see the section below)
 
 Now get rid of the hamburger menu in the top right of the desktop. Right click the desktop
-and select "Configure Desktop..." > Tweaks > DONT Show the desktop toolbox.
+and select "Configure Desktop..." > Tweaks > DONT Show the desktop toolbox. **Not needed from 20.04**
 
 
 ## System Settings
 
-* Workspace > Startup and Shutdown > Login Screen (SDD) > Theme > Breeze > Background
+* Workspace > Startup and Shutdown:
+  * Login Screen (SDDM) > Theme > Breeze (top one will do) > Background (click the button)
+  * Splash Screen > None
 * Workspace > Desktop Behavior:
+  * Screen Locking > Appearance > Add Image... (if not already in the list by now)
   * Screen Edges > remove the action from the top-left corner
-  * Screen Locking > Appearance > Add Image...
   * Desktop effects > Dim inactive and Dim for root privs
 * Workspace > Shortcuts > Global Shortcuts > (reassign if needed):
   * Audio Volume > Alternates for: Mute/Decrease/Increase Volume to `META`-`0`/`-`/`=` (meta being the WIN key)
   * Media Controller > Play/Pause media playback to `META`-`p`
   * Power Management > Alternates for: Increase/Decrease Screen Brightness to `META`-`(`/`)`
-* Workspace > Shortcuts > KWin:
-  * Toggle Present Windows (on all desktops): `META-~` (tilde/backtick key)
+  * KWin > Toggle Present Windows (on all desktops): `META-~` (tilde/backtick key)
 * Personalization > Applications > No feedback (kills busy cursor)
 * Personalization > Regional settings:
-  * Date & Time > Time zone to Amsterdam
   * Formats > Detailed setting > set all to "C"
+  * Date & Time > Time zone to Amsterdam
 * Hardware > Input devices:
   * Mouse: increase speed, invert scrolling
-  * Touchpad: increase speed, enable tap clicking and invert scrolling
+  * Touchpad: increase speed, enable tap clicking, two finger scrolling and invert scrolling
 
 
-## The panel
+## The Panel
 
 Switch the start menu to "Application menu" (right click in bottom-left)
 
@@ -125,21 +125,15 @@ Remove the "Search For" submenu in the places sidebar
 
 ## Redshift (red filter)
 
-Rihgt click the lightbulb icon in the task bar (as per earlier instruction) and pick Configure Redshift Control. In Keyboard Shortcuts set it to `META`-`R`
+Right click the lightbulb icon in the task bar (as per earlier instruction) and pick Configure Redshift Control. In Keyboard Shortcuts set it to `META`-`R`
 
 
 ## Window shortcuts
 
-Now set up the following windows + shortcuts:
-
- * Kosole: `META`-`k`  (somehow this one becomes forgotten)
- * Firefox: `META`-`f`
- * IntelliJ: `META`-`i`
-
-Set 'm up by right clicking the window bar: More Actions > Window Shortcut...
+These dont seem to stick to the windows, any tips welcome here (how to get a shortcut for the first Firefox, Konsole, IntelliJ window)
 
 
-# Some nice shortcuts
+# Some nice shortcuts (to remember)
 
 * Toggle windows maximize: `META-PgUp`
 * Minimize: `META-PgDn`
@@ -147,7 +141,7 @@ Set 'm up by right clicking the window bar: More Actions > Window Shortcut...
 * Switch to window to the L/R or A/B: `META-ALT-<arrows>`
 * Toggle present windows: `META-~` (tilde/backtick) and you can type to find a window in this mode
 * Open print screen dialog: `PrScr`
-*
+
 
 ## Notes
 
