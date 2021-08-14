@@ -1,10 +1,10 @@
 # Docker
 
-Follow [the guide for Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+Follow [the guide for Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
 
 Since I like to run docker as a regular user I need this:
 
-    sudo usermod -aG docker your-user
+    sudo usermod -aG docker $USER
 
 This last step requires one to login again (or simply restart).
 
