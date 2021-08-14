@@ -3,7 +3,7 @@
 Some tools that are not installed by default:
 
 ```
-sudo apt-get install -y kate kompare ktorrent kolourpaint plasma-applet-redshift-control kturtle
+sudo apt-get install -y kate kompare ktorrent kolourpaint kturtle
 ```
 
 
@@ -19,34 +19,14 @@ Now get rid of the hamburger menu in the top right of the desktop. Right click t
 and select "Configure Desktop..." > Tweaks > DONT Show the desktop toolbox. **Not needed from 20.04**
 
 
-## System Settings
-
-* Workspace > Startup and Shutdown:
-  * Login Screen (SDDM) > Theme > Breeze (top one will do) > Background (click the button)
-  * Splash Screen > None
-* Workspace > Desktop Behavior:
-  * Screen Locking > Appearance > Add Image... (if not already in the list by now)
-  * Screen Edges > remove the action from the top-left corner
-  * Desktop effects > Dim inactive and Dim for root privs
-* Workspace > Shortcuts > Global Shortcuts > (reassign if needed):
-  * Audio Volume > Alternates for: Mute/Decrease/Increase Volume to `META`-`0`/`-`/`=` (meta being the WIN key)
-  * Media Controller > Play/Pause media playback to `META`-`p`
-  * Power Management > Alternates for: Increase/Decrease Screen Brightness to `META`-`(`/`)`
-  * KWin > Toggle Present Windows (on all desktops): `META-~` (tilde/backtick key)
-* Personalization > Applications > No feedback (kills busy cursor)
-* Personalization > Regional settings:
-  * Formats > Detailed setting > set all to "C"
-  * Date & Time > Time zone to Amsterdam
-* Hardware > Input devices:
-  * Mouse: increase speed, invert scrolling
-  * Touchpad: increase speed, enable tap clicking, two finger scrolling and invert scrolling
-
 
 ## The Panel
 
-Switch the start menu to "Application menu" (right click in bottom-left)
+*NOTE:* Do this first as the Media Player applet needs to be installed to have its shortcut configured later on.
 
-Add the following widget/applets/plasmoids to the panel:
+Switch the start menu to "Application menu" (right click on the KDE logo in bottom-left).
+
+Add the following widget/applets/plasmoids to the panel though `Add Widgets...` > `Add New Widgets...`:
  
 * System Load Viewer
 * Redshift Control
@@ -70,9 +50,29 @@ From left to right:
 * System Load Viewer (love this)
 * Clock
 
-Now adjust the height of the pannel so that the icons look best (not too much out of line)
+Now adjust the height of the pannel so that the icons look best (not too much out of line).
 
-And finally lock the widgets in the panel
+
+## System Settings
+
+* Workspace > Workspace Behavior:
+  * Desktop effects > Dim inactive and Dim for root privs
+  * Screen Locking > Appearance > Add Image... (if not already in the list by now)
+  * Screen Edges > remove the actions from corners and edges
+* Workspace > Shortcuts > Global Shortcuts > (reassign if needed):
+  * Audio Volume > Alternates for: Mute/Decrease/Increase Volume to `META`-`0`/`-`/`=` (meta being the WIN key)
+  * Media Controller > Play/Pause media playback to `META`-`p`
+  * Power Management > Alternates for: Increase/Decrease Screen Brightness to `META`-`[`/`]`
+* Workspace > Startup and Shutdown:
+  * Login Screen (SDDM) > Theme > Breeze (top one will do) > Background (click the button)
+  * Splash Screen > None
+* Personalization > Applications > Launch Feedback > No feedback (kills busy cursor)
+* Personalization > Regional settings:
+  * Formats > Detailed setting > set all to "C"
+  * Date & Time > Time zone to Amsterdam
+* Hardware > Input devices:
+  * Mouse: increase speed, invert scrolling
+  * Touchpad: increase speed, enable tap clicking, two finger scrolling and invert scrolling
 
 
 ## Konsole
