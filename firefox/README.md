@@ -8,14 +8,19 @@ Gotta install 'm.
 
 * Tree Style Tab
 * uBlock
-* Privacy badger
+* Privacy Badger
+* CleanURLs
+* Firefox Multi-Account Containers
+* NoScript
+* SkipRedirect
+* Temporary Containers
 * Plasma Integration (integration with KDE, so you get OS play-pause to control browser players)
 * Bitwarden (open source, zero knowledge protocol, free for personal use password manager)
 
-Sometimes also have to install 1Password X (password manager), the only non open source plugin. This is a problem as browser plugins have access to a lot of privacy sensitive data.
+Sometimes also have to install 1Password (password manager), the only non open source plugin. This is a problem as browser plugins have access to a lot of privacy sensitive data.
 
 
-## Preferences
+## Settings (from the hamberger menu, right of the address bar)
 
 ### General
 
