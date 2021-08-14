@@ -3,7 +3,15 @@
 Some tools that are not installed by default:
 
 ```
-sudo apt-get install -y kate kompare ktorrent kolourpaint kturtle
+sudo apt-get install -y kate kompare ktorrent kolourpaint kturtle redshift
+```
+
+The `redshift` tool is not KDE specific but required by the *Redshift Control* applet installed later.
+
+Since I do not want `redshift` to automatically change anything based on my geolocation and the current time, I disable it's service. This makes the applet actually usable (otherwise the service will reset the settings from the applet).
+
+```
+systemctl disable redshift --user
 ```
 
 
@@ -13,11 +21,7 @@ Find one, put it in `~/Pictures/wallpaper` and use both for:
 
 * The current display's background
 * Any other backgrounds for displays you may have plugged in
-* An in two places in System Settings (see the section below)
-
-Now get rid of the hamburger menu in the top right of the desktop. Right click the desktop
-and select "Configure Desktop..." > Tweaks > DONT Show the desktop toolbox. **Not needed from 20.04**
-
+* An in two places in System Settings (see the section below
 
 
 ## The Panel
@@ -30,14 +34,19 @@ Add the following widget/applets/plasmoids to the panel though `Add Widgets...` 
  
 * System Load Viewer
 * Redshift Control
-* Media Player (media play/pause key on your keyboard should work)
+* Media Player (so media play/pause key on your keyboard should work)
 
-Configure the System Load Viewer (love this thing) as follows:
+Configure the *System Load Viewer* (love this thing) as follows:
 * Set compact bar (first!)
 * Select all but cache in "Show:"
 * Colors: Set colors manually
 * Maybe tweak the colors a little...
 * WISH: it'd also show network (aggregated in/out) and storage (aggregated i/o)
+
+Configure the *Redshift Control* applet:
+* Disable autostart
+* Set "Manual temperature step" to `25`
+* Set "Manual brightness step" to `0.01`
 
 From left to right:
 * K-menu
@@ -123,9 +132,9 @@ Places toolbar:
 Remove the "Search For" submenu in the places sidebar
 
 
-## Redshift (red filter)
+## Display Configuration
 
-Right click the lightbulb icon in the task bar (as per earlier instruction) and pick Configure Redshift Control. In Keyboard Shortcuts set it to `META`-`R`
+Everytime I attach a monitor you I have to place it over my laptop screen in the *Display Configuration*. It will remember them.
 
 
 ## Window shortcuts
