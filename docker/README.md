@@ -11,5 +11,8 @@ This last step requires one to login again (or simply restart).
 
 ## docker-compose
 
-    sudo curl -L "https://github.com/docker/compose/releases/download/1.25.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+To install the latest version (recommended) run the `curl` command as found on [the installation guide](https://docs.docker.com/compose/install/) (follow the Linux instructions).
+
+Then (as the guide explains) do:
+
     sudo chmod +x /usr/local/bin/docker-compose
