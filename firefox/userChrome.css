@@ -8,7 +8,7 @@ In about:profiles open the "Root Folder/Directory" in the profile that's most li
 Then place this file inside.
 
 On Linux this file should be in:
-    /home/$USER/.mozilla/firefox/$USER_ID.default/chrome/userChrome.css
+    /home/$USER/.mozilla/firefox/$USER_ID.default-release/chrome/userChrome.css
    
 Windows
     Location: C:\Users\<YourUsername>\AppData\Roaming\Mozilla\Firefox\Profiles\<YourFirefoxProfile>\chrome
