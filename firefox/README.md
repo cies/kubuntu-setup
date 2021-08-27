@@ -25,6 +25,7 @@ Sometimes also have to install 1Password (password manager), the only non open s
 ### General
 
 * Startup: Restore previous session
+* Tabs: Ctrl+Tab cycles through tabs in recently used order
 * Downloads: Always ask where
 
 ### Privicy & Security
