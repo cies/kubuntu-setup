@@ -13,6 +13,8 @@ Since I'm used to `vim` and it's modal editing, I prefer a vim-like editor for t
     ln -s /usr/bin/nvim /usr/local/bin/vim
     ln -s /usr/bin/nvim /usr/local/bin/vi
 
-Now try out NeoVim with: `vi`
+Now try out NeoVim (from and within the terminal) with: `vi`
 
 When using Emacs I found Spacemacs and it kind of got stuck. Using some keyboard friendly and self-documenting menus to get stuff done while you slowly work on remembering more shortcuts.
+
+To get my default settings for NeoVim copy the `init.toml` file from this directory into `~/.SpaveVim/`:
