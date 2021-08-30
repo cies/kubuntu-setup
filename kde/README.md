@@ -68,9 +68,12 @@ Now adjust the height of the pannel so that the icons look best (not too much ou
   * Desktop effects > Dim inactive and Dim for root privs
   * Screen Locking > Appearance > Add Image... (if not already in the list by now)
   * Screen Edges > remove the actions from corners and edges
+* Workspace > Window Management:
+  * Task Switcher > Main tab > Pick "Informative" from the top-left dropdown menu
 * Workspace > Shortcuts > Global Shortcuts > (reassign if needed):
   * Audio Volume > Alternates for: Mute/Decrease/Increase Volume to `META`-`0`/`-`/`=` (meta being the WIN key)
   * Media Controller > Play/Pause media playback to `META`-`p`
+  * Plasma > Open Klipper at mouse position to `META`-`v`
   * Power Management > Alternates for: Increase/Decrease Screen Brightness to `META`-`[`/`]`
 * Workspace > Startup and Shutdown:
   * Login Screen (SDDM) > Theme > Breeze (top one will do) > Background (click the button)
