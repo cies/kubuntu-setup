@@ -10,10 +10,10 @@ Gotta install 'm.
 * uBlock
 * Privacy Badger
 * CleanURLs
-* Firefox Multi-Account Containers
+* Firefox Multi-Account Containers ([this](https://www.thechiefmeat.com/guides/containers.html) should get you started)
+* Temporary Containers (not needed when using *Firefox Multi-Account Containers*)
 * NoScript
 * SkipRedirect
-* Temporary Containers
 * Plasma Integration (integration with KDE, so you get OS play-pause to control browser players)
 * Bitwarden (open source, zero knowledge protocol, free for personal use password manager)
 
