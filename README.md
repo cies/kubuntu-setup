@@ -15,9 +15,9 @@ This repro is to scratch my own itch, but feel free to copy from it. If you have
 
 When installing choose these options:
 
-* Keyboard layout: US/ Euro on 5
+* Keyboard layout variant: US/ Euro on 5
 * What to install: Minimal installation + updates + proprietary extras
-* Partitioning: Split root and home partitions without disk encryption or "one big root partition" with encryption
+* Partitioning: Split root and home partitions without disk encryption or "Guided- use entire disk and setup encrypted LVM" if you want full disk encryption
 * Timezone: US/NYC (switch it later back to my actual timezone, as setting it here will result in unwanted localization settings beyond the timezone)
 
 
