@@ -34,7 +34,6 @@ Add the following widget/applets/plasmoids to the panel though `Add Widgets...` 
  
 * System Load Viewer
 * Redshift Control
-* Media Player (so media play/pause key on your keyboard should work)
 
 Configure the *System Load Viewer* (love this thing) as follows:
 * Set compact bar (first!)
@@ -47,19 +46,22 @@ Configure the *Redshift Control* applet:
 * Disable autostart
 * Set "Manual temperature step" to `25`
 * Set "Manual brightness step" to `0.01`
+* ISSUE: setting keeps reverting in current setup]
+* TODO: use it from System Tray
 
 From left to right:
 * K-menu
 * NOT a pager (remove it)
-* task switcher
-* status bar
-* the tiniest spacer you can make
-* Media Player
-* Redshift Control
+* Task Manager
 * System Load Viewer (love this)
+* System Tray (configure it to remove Clipboard entry, as `META-V` is the way to go; before removing right click the icon `Configure Clipboard... > Clipboard history size` size set to 25)
+* the tiniest spacer you can make
+* Redshift Control
 * Clock
 
 Now adjust the height of the pannel so that the icons look best (not too much out of line).
+
+
 
 
 ## System Settings
