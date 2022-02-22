@@ -11,6 +11,23 @@ This repo contains per-topic guides (by means of a `README.md` file each in a di
 This repro is to scratch my own itch, but feel free to copy from it. If you have tips or otherwise want to reach out (maybe you found a life saving productivity hack in here) feel free to file a issue even if you just want to say hi. There's no issue template. No code of conduct. Go for it.
 
 
+# Download the ISO and prepare a USB drive
+
+First [download a recent Kubuntu ISO](https://kubuntu.org/getkubuntu). Then write the `.iso` file to a USB drive.
+
+Find the block device of the USB drive with:
+
+    lsblk  # repeat this with and without the USB drive inserted
+
+Make sure the USB drive is **not** mounted.
+
+We assume the USB drive is available as `/dev/sdb` and the image is `kubuntu-21.10-desktop-amd64.iso`.
+
+     sudo dd if=./kubuntu-21.10-desktop-amd64.iso of=/dev/sdb bs=4M status=progress && sync
+
+When this is finished the USB drive is ready to be used as installation medium.
+
+
 # Installing Kubuntu
 
 When installing choose these options:
