@@ -11,7 +11,7 @@ This repo contains per-topic guides (by means of a `README.md` file each in a di
 This repro is to scratch my own itch, but feel free to copy from it. If you have tips or otherwise want to reach out (maybe you found a life saving productivity hack in here) feel free to file a issue even if you just want to say hi. There's no issue template. No code of conduct. Go for it.
 
 
-# Download the ISO and prepare a USB drive
+## Download the ISO and prepare a USB drive
 
 First [download a recent Kubuntu ISO](https://kubuntu.org/getkubuntu). Then write the `.iso` file to a USB drive.
 
@@ -28,7 +28,7 @@ We assume the USB drive is available as `/dev/sdb` and the image is `kubuntu-21.
 When this is finished the USB drive is ready to be used as installation medium.
 
 
-# Installing Kubuntu
+## Installing Kubuntu
 
 When installing choose these options:
 
@@ -38,12 +38,12 @@ When installing choose these options:
 * Timezone: US/NYC (switch it later back to my actual timezone, as setting it here will result in unwanted localization settings beyond the timezone)
 
 
-# Generic setup
+## Generic setup
 
 If I don't do these first, doing the rest will be unnessecarily frustrating.
 
 
-## Install some packages
+### Install some packages
 
 I'm blind without these, and the rest of the READMEs may require them.
 
@@ -52,7 +52,7 @@ sudo apt-get install -y git tig vim htop iotop tree build-essential net-tools
 ```
 
 
-## Keyboard mapping
+### Keyboard mapping
 
 This maps `CAPS` to an extra `CTRL`, sets up `R-ALT` as the compose key
 (allowing: `R-ALT` `"` `e` → `ë`), and maps `MENU` to `R-CTRL`, and `R-CTRL` to the `R-WIN` key.
@@ -77,7 +77,7 @@ sudo dpkg-reconfigure keyboard-configuration
 Answer the questions. It puts the keyboard config realy deep in the OS (initramfs), so it works always and everywhere. It requires a restart to be in effect.
 
 
-## Get `/usr/local/src` ready
+### Get `/usr/local/src` ready
 
 I like to use that directory as a normal user.
 
@@ -86,7 +86,7 @@ sudo chown $USER:$USER /usr/local/src
 ```
 
 
-## Remove snap
+### Remove snap
 
 I hate it. It makes my system less predictable, increases load times, makes UI stuff look ugly, obfuscates process monitoring, hogs resources, does not allow me to start applications from the command line, cannot deal with files in `/tmp` (and I happen to use `/tmp` a lot), litters my system non-standard directories, installs in `$HOME` what I consider system applications, creates loads of mounts, makes if hard to do audio (like connecting a mic to Chromium)... I can go on.
 
