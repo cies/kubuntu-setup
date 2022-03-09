@@ -56,6 +56,15 @@ Use the "customize" mode to organize icons/widgets from left to right:
 Make sure to first restart FF with a tab pinned to be sure it remembers your session
 
 
+## Changes to about:config
+
+Thse changes are made in `about:config` (enter that in the location bar).
+
+* Change paper size to A4 (Firefox does not pick up `/etc/papersize`):
+  * Find `print.print_paper_name`
+  * Enter `iso_a4` in the dialog box and press OK.
+
+
 ## Make spellcheck multi-lingual
 
 [Explained here](https://superuser.com/questions/108177/how-do-i-make-firefox-spellcheck-in-multiple-languages-simultaneously)
