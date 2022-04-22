@@ -106,6 +106,32 @@ Package: snapd
 Pin: origin ""
 Pin-Priority: -1
 EOL
+sudo bash -c "cat > /etc/apt/preferences.d/mozillateamppa.pref" << EOL
+Package: firefox*
+Pin: release o=LP-PPA-mozillateamppa
+Pin-Priority: 501
+EOL
+sudo bash -c "cat > /etc/apt/preferences.d/chromium.pref" << EOL
+# Note: 2 blank lines are required between entries
+Package: *
+Pin: release a=jammy
+Pin-Priority: 500
+
+Package: *
+Pin: origin "ftp.debian.org"
+Pin-Priority: 300
+
+# Pattern includes 'chromium', 'chromium-browser' and similarly named dependencies:
+Package: chromium*
+Pin: origin "ftp.debian.org"
+Pin-Priority: 700
+EOL
+```
+
+```
+sudo apt remove firefox chromium chromium-browser chromium-browser-l10n chromium-codecs-ffmpeg-extra
+sudo apt update
+sudo apt install firefox-esr chromium
 ```
 
 The last lines are an attempt to ensure snapd will not be considered in future.
