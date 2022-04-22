@@ -91,18 +91,24 @@ sudo chown $USER:$USER /usr/local/src
 I hate it. It makes my system less predictable, increases load times, makes UI stuff look ugly, obfuscates process monitoring, hogs resources, does not allow me to start applications from the command line, cannot deal with files in `/tmp` (and I happen to use `/tmp` a lot), litters my system non-standard directories, installs in `$HOME` what I consider system applications, creates loads of mounts, makes if hard to do audio (like connecting a mic to Chromium)... I can go on.
 
 ```
-sudo rm -rf /var/cache/snapd/ && sudo apt autoremove --purge snapd && rm -fr ~/snap
-```
-
-And make sure it never installs again:
-
-```
+sudo apt autoremove --purge snapd
+sudo apt remove --purge plasma-discover-backend-snap
+sudo apt purge -y snapd
+sudo apt purge -y libsnapd-qt1
+rm -rf ~/snap
+sudo rm -rf /snap
+sudo rm -rf /var/snap
+sudo rm -rf /var/cache/snapd
+sudo rm -rf /var/lib/snapd
+sudo apt-mark hold snapd
 sudo bash -c "cat > /etc/apt/preferences.d/no-snapd.pref" << EOL
 Package: snapd
 Pin: origin ""
 Pin-Priority: -1
 EOL
 ```
+
+The last lines are an attempt to ensure snapd will not be considered in future.
 
 
 ## That's it...
