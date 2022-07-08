@@ -10,6 +10,8 @@ This repo contains per-topic guides (by means of a `README.md` file each in a di
 
 This repro is to scratch my own itch, but feel free to copy from it. If you have tips or otherwise want to reach out (maybe you found a life saving productivity hack in here) feel free to file a issue even if you just want to say hi. There's no issue template. No code of conduct. Go for it.
 
+**NOTE**: This guide assumes Kubuntu version **22.04** (LTS), it may or may not with newer versions.
+
 
 ## Download the ISO and prepare a USB drive
 
@@ -23,7 +25,7 @@ Make sure the USB drive is **not** mounted.
 
 We assume the USB drive is available as `/dev/sdb` and the image is `kubuntu-21.10-desktop-amd64.iso`.
 
-     sudo dd if=./kubuntu-21.10-desktop-amd64.iso of=/dev/sdb bs=4M status=progress && sync
+     sudo dd if=./kubuntu-22.04-desktop-amd64.iso of=/dev/sdb bs=4M status=progress && sync
 
 When this is finished the USB drive is ready to be used as installation medium.
 
@@ -106,35 +108,20 @@ Package: snapd
 Pin: origin ""
 Pin-Priority: -1
 EOL
-sudo bash -c "cat > /etc/apt/preferences.d/mozillateamppa.pref" << EOL
-Package: firefox*
-Pin: release o=LP-PPA-mozillateamppa
-Pin-Priority: 501
-EOL
-sudo bash -c "cat > /etc/apt/preferences.d/chromium.pref" << EOL
-# Note: 2 blank lines are required between entries
-Package: *
-Pin: release a=jammy
-Pin-Priority: 500
-
-Package: *
-Pin: origin "ftp.debian.org"
-Pin-Priority: 300
-
-# Pattern includes 'chromium', 'chromium-browser' and similarly named dependencies:
-Package: chromium*
-Pin: origin "ftp.debian.org"
-Pin-Priority: 700
-EOL
 ```
+
+The last lines are an attempt to ensure snapd will not be considered in future.
+
+The following commands are interactive:
 
 ```
 sudo apt remove firefox chromium chromium-browser chromium-browser-l10n chromium-codecs-ffmpeg-extra
+sudo add-apt-repository ppa:mozillateam/ppa
+sudo add-apt-repository ppa:savoury1/chromium
 sudo apt update
 sudo apt install firefox-esr chromium
 ```
 
-The last lines are an attempt to ensure snapd will not be considered in future.
 
 
 ## That's it...
