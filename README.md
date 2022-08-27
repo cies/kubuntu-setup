@@ -1,4 +1,4 @@
-# My Kubuntu setup
+# My OpenSUSE Tumbleweed setup
 
 After enjoying Kubuntu and KDE for a while, I got fed up with the problematic distribution version upgrades.
 I wanted to go with a rolling release model, and somethign that does not tries to shove `snap` or `flatpak` down my throat.
