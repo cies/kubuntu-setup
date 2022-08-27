@@ -69,7 +69,28 @@ sudo zypper install git tig htop iotop
 I like to use that directory as a normal user.
 
 ```bash
-sudo chown $USER:$USER /usr/local/src
+sudo chown -R $USER:$USER /usr/local/bin /usr/local/share /usr/local/src
+```
+
+## Current laptop
+
+Using a Lenovo Yoga Slim 7 my touchpad does not work after sleep/hibernate, this fixes it:
+
+```bash
+sudo bash -c "cat >> ~/.config/systemd/user/restart-touchpad.service" << EOF
+[Unit]
+Description=Restart Touchpad
+After=suspend.target hibernate.target
+
+[Service]
+Type=oneshot
+Environment=DISPLAY=:0
+ExecStartPre=xinput disable 13
+ExecStart=xinput enable 13
+
+[Install]
+WantedBy=suspend.target hibernate.target
+EOF
 ```
 
 
