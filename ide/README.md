@@ -1,5 +1,7 @@
 # IDEs
 
+**NOTE**: The `/usr/local/bin` and `/usr/local/share` path should be writable for the user as per instruction in the top level README.
+
 I'm on the IntelliJ camp. Since I likely have more than one JetBrains IDE installed, I manage them with [Jetbrains Toolbox](https://www.jetbrains.com/toolbox-app), installed with:
 
 ```bash
@@ -9,14 +11,15 @@ tar -xzf jetbrains-toolbox.tar.gz
 DIR=$(find . -maxdepth 1 -type d -name jetbrains-toolbox-\* -print | head -n1)
 mv $DIR/jetbrains-toolbox .
 rmdir $DIR
+./jetbrains-toolbox
 ```
 
-**NOTE**: The `/usr/local/bin` path should be writable for the user as per instruction in the top level README.
+When it runs click the settings icon (gear shape in the top-right) to:
 
-Now run it and click the settings icon (gear shape in the top-right) to:
-
-* set the location on disk (I rather not have 3rd party binaries in my home dir)
-* improve privacy by not allowing data sharing
+* Set the "Tools install location" (I rather not have 3rd party binaries in my home dir) to: `/usr/local/share/JetBrains/Toolbox`
+* Improve privacy by not allowing data sharing.
+* Disable "Launch Toolbox App at system startup", to conserve valuable resources.
 
 And install you IDE of choice. I do *IntellJ IDEA Community Edition*.
 
+When done downloading close the app by *settings icon -> Quit* or `CTRL-Q`.
