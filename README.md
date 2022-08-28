@@ -64,7 +64,7 @@ I'm blind without these, and the rest of the READMEs may require them.
 sudo zypper install git tig htop iotop ripgrep
 ```
 
-### Get `/usr/local/src` ready
+### Get `/usr/local/{bin,share,src}` ready
 
 I like to use that directory as a normal user.
 
@@ -72,43 +72,28 @@ I like to use that directory as a normal user.
 sudo chown -R $USER:$USER /usr/local/bin /usr/local/share /usr/local/src
 ```
 
-## Current laptop
+## Current laptop's issue: touchpad not working after waking up
 
-Using a Lenovo Yoga Slim 7 my touchpad does not work after sleep/hibernate, this fixes it:
-
+Using a Lenovo Yoga Slim 7 14ARE05 my touchpad does not work after sleep/hibernate, this fixes it when using KDE:
 
 ```bash
-sudo bash -c "touch /lib/systemd/system-sleep/restart-touchpad.sh; chmod +x /lib/systemd/system-sleep/restart-touchpad.sh; cat > /lib/systemd/system-sleep/restart-touchpad.sh" << EOF
+cat > /usr/local/bin/restart-touchpad.sh << EOF
 #!/bin/sh
-TOUCHPAD_NAME="\$(xinput list --name-only | grep Touchpad)"
-case \$1 in
-  post)
-    export DISPLAY=:0
-    DISPLAY=:0 xinput disable "\$TOUCHPAD_NAME"
-    DISPLAY=:0 xinput enable "\$TOUCHPAD_NAME"
-  ;;
-esac
+export TOUCHPAD_NAME="\$(xinput list --name-only | grep Touchpad)"
+xinput disable "\$TOUCHPAD_NAME" && xinput enable "\$TOUCHPAD_NAME"
+EOF
+chmod +x /usr/local/bin/restart-touchpad.sh
+cat > ~/.config/ksmserver.notifyrc << EOF
+[Event/unlocked]
+Action=Execute
+Execute=/usr/local/bin/restart-touchpad.sh
+Logfile=
+Sound=
+TTS=
 EOF
 ```
 
-```bash
-sudo bash -c "cat > /etc/systemd/system/restart-touchpad.service" << EOF
-[Unit]
-Description=Restart Touchpad
-After=suspend.target hibernate.target
-
-[Service]
-Type=oneshot
-User=$USER
-Group=$USER
-ExecStart=/bin/bash -c "DISPLAY=:0 XAUTHORITY=\$(xauth info | grep 'Authority file' | awk '{print \$3}') TOUCHPAD_NAME='$(xinput list --name-only | grep Touchpad)'; xinput enable \$TOUCHPAD_NAME && xinput disable \$TOUCHPAD_NAME"
-
-[Install]
-WantedBy=suspend.target hibernate.target
-EOF
-```
-
-Enable the service in the current session with: `systemctl enable restart-touchpad.service --now`
+**NOTE**: Finding a non-KDE-specific solution is not easy as requires the use of systemd's system-wide services (only those have access to the suspend and hibernate targets), while the system-wide services cannot access Xorg since the `XAUTHORITY` env var is not set (and on modern machines it can no longer be expected to be at `~/.Xauthority`.
 
 
 ## That's it...
