@@ -3,19 +3,13 @@
 Some tools that are not installed by default:
 
 ```
-sudo apt-get install -y kate kompare ktorrent kolourpaint kturtle redshift
+sudo zypper install kompare ktorrent kolourpaint kturtle ksysguard5
 ```
 
-The `redshift` tool is not KDE specific but required by the *Redshift Control* applet installed later.
-
-Since I do not want `redshift` to automatically change anything based on my geolocation and the current time, I disable it's service. This makes the applet actually usable (otherwise the service will reset the settings from the applet).
-
-```
-systemctl disable redshift --user
-```
+The `ksysguard5` is a dependency of the later installed "System Load Viewer" panel applet.
 
 
-## Wallpaper
+## Changing the wallpaper
 
 Find one, put it in `~/Pictures/wallpaper` and use both for:
 
