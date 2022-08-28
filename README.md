@@ -61,7 +61,7 @@ These are fundamental to the per topic READMEs.
 I'm blind without these, and the rest of the READMEs may require them.
 
 ```bash
-sudo zypper install git tig htop iotop 
+sudo zypper install git tig htop iotop ripgrep
 ```
 
 ### Get `/usr/local/src` ready
@@ -76,22 +76,39 @@ sudo chown -R $USER:$USER /usr/local/bin /usr/local/share /usr/local/src
 
 Using a Lenovo Yoga Slim 7 my touchpad does not work after sleep/hibernate, this fixes it:
 
+
 ```bash
-sudo bash -c "cat >> ~/.config/systemd/user/restart-touchpad.service" << EOF
+sudo bash -c "touch /lib/systemd/system-sleep/restart-touchpad.sh; chmod +x /lib/systemd/system-sleep/restart-touchpad.sh; cat > /lib/systemd/system-sleep/restart-touchpad.sh" << EOF
+#!/bin/sh
+TOUCHPAD_NAME="\$(xinput list --name-only | grep Touchpad)"
+case \$1 in
+  post)
+    export DISPLAY=:0
+    DISPLAY=:0 xinput disable "\$TOUCHPAD_NAME"
+    DISPLAY=:0 xinput enable "\$TOUCHPAD_NAME"
+  ;;
+esac
+EOF
+```
+
+```bash
+sudo bash -c "cat > /etc/systemd/system/restart-touchpad.service" << EOF
 [Unit]
 Description=Restart Touchpad
 After=suspend.target hibernate.target
 
 [Service]
 Type=oneshot
-Environment=DISPLAY=:0
-ExecStartPre=xinput disable 13
-ExecStart=xinput enable 13
+User=$USER
+Group=$USER
+ExecStart=/bin/bash -c "DISPLAY=:0 XAUTHORITY=\$(xauth info | grep 'Authority file' | awk '{print \$3}') TOUCHPAD_NAME='$(xinput list --name-only | grep Touchpad)'; xinput enable \$TOUCHPAD_NAME && xinput disable \$TOUCHPAD_NAME"
 
 [Install]
 WantedBy=suspend.target hibernate.target
 EOF
 ```
+
+Enable the service in the current session with: `systemctl enable restart-touchpad.service --now`
 
 
 ## That's it...
