@@ -61,12 +61,12 @@ These steps are fundamental to the per topic READMEs and/or my sanity.
 I'm blind without these, and the rest of the READMEs may require them.
 
 ```bash
-sudo zypper install git tig htop iotop ripgrep
+sudo zypper install git tig htop iotop ripgrep xinput
 ```
 
 ### Get `/usr/local/{bin,share,src}` ready
 
-I like to use that directory as a normal user.
+Since I like to use that `/usr/local` for installing software as a normal user that is not managed by the package manager and should be available system-wide.
 
 ```bash
 sudo chown -R $USER:$USER /usr/local/bin /usr/local/share /usr/local/src
@@ -74,7 +74,7 @@ sudo chown -R $USER:$USER /usr/local/bin /usr/local/share /usr/local/src
 
 ## Current laptop's issue: touchpad not working after waking up
 
-Using a Lenovo Yoga Slim 7 14ARE05 my touchpad does not work after sleep/hibernate, this fixes it when using KDE:
+Using a *Lenovo Yoga Slim 7 14ARE05* my touchpad does not work after sleep/hibernate, this fixes it when using KDE:
 
 ```bash
 cat > /usr/local/bin/restart-touchpad.sh << EOF
