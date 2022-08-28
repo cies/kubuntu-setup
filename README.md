@@ -53,7 +53,7 @@ When installing choose these options:
 
 ## Generic setup
 
-These are fundamental to the per topic READMEs.
+These steps are fundamental to the per topic READMEs and/or my sanity.
 
 
 ### Install some packages
