@@ -1,5 +1,7 @@
 # Docker
 
+This installs `docker` and `docker-compose`:
+
 ```sh
 sudo groupadd docker
 sudo gpasswd -a $USER docker
