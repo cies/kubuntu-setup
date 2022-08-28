@@ -1,10 +1,11 @@
 dbeaver
 =======
 
+A great tool for interfacing with (remote) databases. It's not available by default so we download the package from the vendor.
 
 ```sh
-sudo add-apt-repository ppa:serge-rider/dbeaver-ce
-sudo apt-get update
-sudo apt-get install dbeaver-ce
+cd /tmp
+wget -c https://dbeaver.io/files/dbeaver-ce-latest-stable.x86_64.rpm
+sudo rpm -Uvh dbeaver-ce-latest-stable.x86_64.rpm
 ```
 
