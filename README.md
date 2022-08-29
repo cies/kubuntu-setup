@@ -43,13 +43,16 @@ When installing choose these options:
 
 ```
 /dev/nvme0n1
-|--   /dev/nvme0n1p1     0.55 GB   F         EFI System Partition    /boot/efi
-|--   /dev/nvme0n1p2    15.00 GB   F         Swap Partition          <swap>
-|--   /dev/nvme0n1p3     1.20 GB   F         Ext4 Partition          /boot
-\--   /dev/nvme0n1p4   900.00 GB   F   ENC   Btrfs Partition
-      |--   @/         900.00 GB             Btrfs Subvolume         /
-      \--   @/home     900.00 GB             Btrfs Subvolume         /home
+|--   /dev/nvme0n1p1     0.55 GB   F         fat     EFI System Partition    /boot/efi
+|--   /dev/nvme0n1p2    15.00 GB   F         swap    Swap Partition          <swap>
+|--   /dev/nvme0n1p3     1.20 GB   F         ext4    Ext4 Partition          /boot
+\--   /dev/nvme0n1p4   900.00 GB   F   ENC   btrfs   Btrfs Partition         /
+      \--   @/home     900.00 GB                     Btrfs Subvolume         /home
 ```
+
+We assume a total reinstall, so every partition should be formatted (`F`).
+The 900 GB merely means "the rest of the disk". Only the btrfs partition should be encrypted.
+
 
 ## Generic setup
 
