@@ -10,3 +10,5 @@ sudo zypper install docker docker-compose
 sudo systemctl enable docker
 sudo systemctl start docker
 ```
+
+Subsequently demonstrate it all works with: `docker run hello-world`
