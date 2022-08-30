@@ -44,6 +44,24 @@ XLbInptPointerAcceleration=0.2
 cursorSize=36
 ```
 
+**NOTE**: In the main README a script is set up to run after each unlock event to re-enable the touchpad (which is disabled somehow on my machine) and to re-apply the mouse settings above as they get lost (when unplugged).
+
+
+## Disable KWallet
+
+I keep my passwords/phrases in BitWarden (personal) and 1Password (work), so I have no need for KWallet.
+
+```bash
+cat > ~/.config/kwalletrc << EOF
+[Wallet]
+Enabled=false
+First Use=false
+EOF
+```
+
+After this the NetworkManager will save wifi passwords unencrypted in `/etc/NetworkManager/system-connections` by default.
+This makes it easy to [migrate wifi passwords to another system](../wifi-passwords/README.md).
+
 
 ## Disabling desktop search engine `baloo`
 
@@ -186,19 +204,6 @@ EOF
 
 To set:
 * Personalization > Applications > Launch Feedback > No feedback
-
-
-## Disable KWallet
-
-I keep my passwords/phrases in BitWarden (personal) and 1Password (work), so I have no need for KWallet.
-
-```bash
-cat > ~/.config/kwalletrc << EOF
-[Wallet]
-Enabled=false
-First Use=false
-EOF
-```
 
 
 ## Konsole
