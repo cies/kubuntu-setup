@@ -77,13 +77,18 @@ sudo chown -R $USER:$USER /usr/local/bin /usr/local/share /usr/local/src
 
 ## Current laptop's issue: touchpad not working after waking up
 
-Using a *Lenovo Yoga Slim 7 14ARE05* my touchpad does not work after sleep/hibernate, this fixes it when using KDE:
+Using a *Lenovo Yoga Slim 7 14ARE05* my touchpad does not work after sleep/hibernate, this fixes it when using KDE.
+
+It also fixes [a bug in KDE](https://bugs.kde.org/show_bug.cgi?id=435113) by which mouse settings get lost when unplugging (use `CTRL-L` to activate the lock screen).
 
 ```bash
 cat > /usr/local/bin/restart-touchpad.sh << EOF
 #!/bin/sh
 export TOUCHPAD_NAME="\$(xinput list --name-only | grep Touchpad)"
 xinput disable "\$TOUCHPAD_NAME" && xinput enable "\$TOUCHPAD_NAME"
+export USB_MOUSE_NAME="\$(xinput list --name-only | grep 'USB Optical Mouse')"
+xinput set-prop "\$USB_MOUSE_NAME" 287 1
+xinput set-prop "\$USB_MOUSE_NAME" 298 0.2
 EOF
 chmod +x /usr/local/bin/restart-touchpad.sh
 cat > ~/.config/ksmserver.notifyrc << EOF
@@ -103,5 +108,5 @@ EOF
 
 See the on topic READMEs in the sub directories.
 
-Usually I start with `kde` and `zsh` to avoid annoyance getting the others done.
+Usually I start with `kde` and `zsh` to avoid annoyances getting the others done.
 
