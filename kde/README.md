@@ -42,6 +42,7 @@ X11LibInputXAccelProfileFlat=false
 XLbInptNaturalScroll=true
 XLbInptPointerAcceleration=0.2
 cursorSize=36
+EOF
 ```
 
 **NOTE**: In the main README a script is set up to run after each unlock event to re-enable the touchpad (which is disabled somehow on my machine) and to re-apply the mouse settings above as they get lost (when unplugged).
