@@ -5,7 +5,7 @@ The *Bonjour/Dejavu* protocol is considered a security thread (it advertises you
 To test if we can find *Bonjour* services on the local network we need the `avahi` tools installed:
 
 ```bash
-sudo zypper install avahi-utils
+sudo zypper install -y avahi-utils
 ```
 
 Using `avahi-browse -at` you can list any *Bonjour* sevices that can be found.
@@ -32,4 +32,11 @@ Finally I close the firewall for *Bonjour* with:
 
 ```bash
 sudo firewall-cmd --zone=public --remove-service=mdns
+```
+
+By installing printer drivers you may have installed `hplip` which sets up the *HP Device Manager* to autostart.
+I do not like that and remove it with:
+
+```bash
+sudo zypper remove -y hplip
 ```
