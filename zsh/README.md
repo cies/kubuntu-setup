@@ -2,24 +2,30 @@
 
 Install and setup the bare dependecies:
 
-    sudo apt-get install -y zsh fzf gradle-completion ripgrep dtrx xclip 
-    sudo usermod -s /bin/zsh $USER
+```bash
+sudo zypper install -y zsh fzf ripgrep xclip 
+sudo usermod -s /bin/zsh $USER
+```
 
 Zinit is used as plugin manager (to manage zsh-specific dependencies):
 
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
+```bash
+bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
+```
+
+Skin setting up the additional annexes with `n`.
 
 Finally add some config to `~/.zshrc` with:
 
 ```
-cat <<EOT >>
+cat >> ~/.zshrc << EOF
 PURE_PROMPT_SYMBOL="$"
 
 zinit for \
     light-mode  zsh-users/zsh-autosuggestions \
-    light-mode  zdharma/fast-syntax-highlighting \
+    light-mode  zdharma-continuum/fast-syntax-highlighting \
                 zsh-users/zsh-completions \
-                zdharma/history-search-multi-word \
+                zdharma-continuum/history-search-multi-word \
     pick"async.zsh" src"pure.zsh" \
                 sindresorhus/pure
 
@@ -59,7 +65,7 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
-EOT
+EOF
 ```
 
 Some interesting commands:
@@ -81,8 +87,6 @@ alias "c=xclip"
 alias "v=xclip -o"
 alias "pbcopy=xclip"
 alias "pbpaste=xclip -o"
-
-ripgrep 
 
 understand history better, and why it seems to not all come to the same place
 
