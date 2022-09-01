@@ -4,7 +4,7 @@ Currently I mosty write code in IntelliJ. Occasionally I want a light weight edi
 
 Since I'm used to `vim` and it's modal editing, I prefer a vim-like editor for that. NeoVim does the trick. Install it with:
 
-    sudo apt-get install -y git curl lua5.4 build-essential neovim
+    sudo zypper install -y neovim
     cd /usr/local/src/
     git clone https://github.com/Shougo/vimproc.vim; cd vimproc.vim/
     cp -r autoload/vimproc* ~/.config/nvim/autoload/
