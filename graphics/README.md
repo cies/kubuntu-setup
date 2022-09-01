@@ -2,5 +2,5 @@
 
 
 
-    sudo apt-get install -y inkscape gimp kolourpaint
+    sudo zypper install -y inkscape gimp kolourpaint
 
