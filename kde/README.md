@@ -178,9 +178,9 @@ Disable background services that I consider unneeded:
 ### Personalization > Regional Settings
 
 ```bash
-cat ~/.config/plasma-localerc << EOF
+cat > ~/.config/plasma-localerc << EOF
 [Formats]
-LANG=en_US.UTF-8
+LANG=C
 LC_MEASUREMENT=C
 LC_MONETARY=C
 LC_NUMERIC=en_US.UTF-8
@@ -188,7 +188,7 @@ LC_TIME=C
 EOF
 ```
 
-To be slightly less US-centric, and prefer 24h time format over the AM/PM-style.
+To be slightly less US-centric, and prefer 24h time format over the AM/PM-style. Though keep the thousands separators in for big numbers.
 
 ### Death to the bouncy busy pointer
 
