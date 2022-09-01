@@ -1,6 +1,7 @@
 # Firefox
 
-Firefox comes pre-installed on Kubutnu. It easily is one of my most used apps, and still has a horrible story for power users.
+Firefox comes pre-installed with OpenSUSE.
+It easily is one of my most used apps, yet sadly still has a horrible story for power users.
 
 ## Plugins
 
