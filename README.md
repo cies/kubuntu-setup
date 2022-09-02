@@ -1,5 +1,7 @@
 # My Kubuntu setup
 
+**NOTE**: This repository archived as I've since moved to OpenSUSE Tumbleweed for which I keep [similar notes](https://github.com/cies/tumbleweed-setup).
+
 After having a bad experience with other distros I'm back to Kubuntu and KDE.
 
 KDE because... [XFCE](https://www.xfce.org) was too light (and [in terms of resources not much lighter](https://www.forbes.com/sites/jasonevangelho/2019/10/23/bold-prediction-kde-will-steal-the-lightweight-linux-desktop-crown-in-2020) than KDE). [LXQt](https://lxqt.org) was not there yet. [GNOME](https://www.gnome.org/gnome-3) was better in some ways, but could not beat KDE for me.
