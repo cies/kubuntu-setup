@@ -32,6 +32,21 @@ sudo dd if=/tmp/openSUSE-Tumbleweed-DVD-*-Media.iso of=/dev/sdb bs=4M status=pro
 
 When this is finished the USB drive is ready to be used as installation medium.
 
+To add an aditional partition to the USB drive to use for storage run:
+
+```bash
+sudo cfdisk /dev/sda
+```
+
+Create an additional partition that uses all empty space, set the type to `W95 FAT32 LBA` and write the table to disk.
+Then format the partition with:
+
+```bash
+sudo mkfs.vfat /dev/sdaX
+```
+
+Where `X` is the number of the just created extra partition (use `lsblk` to find it).
+
 
 ## Installing Kubuntu
 
